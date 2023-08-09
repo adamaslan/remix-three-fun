@@ -1,3 +1,5 @@
+import { Link } from "@remix-run/react";
+
 export function headers({
   loaderHeaders,
   parentHeaders,
@@ -18,7 +20,19 @@ export function headers({
 export default function Index() {
   return (
     <main style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+      <h1>We like Remix</h1>
+      
+      <div><Link to="/three-magic">
+        THHREEEE
+        
+          {/* <img
+            className="m-2 h-auto max-w-full flex-col rounded-full shadow-none transition-shadow duration-300 ease-in-out hover:shadow-lg hover:shadow-black/30"
+            src={analytics}
+            alt="computer and graphs"
+          /> */}
+
+      </Link>
+      </div>
       <ul>
         <li>
           <a
