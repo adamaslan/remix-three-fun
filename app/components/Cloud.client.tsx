@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Sky, Box, Sphere, Cylinder, Torus, OrbitControls, Text } from "@react-three/drei";
-import * as THREE from "three";
+// import * as THREE from "three";
 
 // Create a box component that uses the custom material component
 const Box1: React.FC = () => {
@@ -39,8 +39,8 @@ const MovingText: React.FC<{color: string; shape: number; position: [x: number, 
     }
   });
   return (
-    <Text ref={textRef} fontSize={1}  color={color} depthTest={false} position={position}>
-     nycpony
+    <Text ref={textRef} fontSize={1}  color={color} position={position}>
+     I LUV Remix and CockroachDB
       <meshBasicMaterial attach="material" color={color} />
     </Text>
   );
@@ -50,7 +50,7 @@ const MovingText: React.FC<{color: string; shape: number; position: [x: number, 
 const SetCanvasSize: React.FC = () => {
   const { size, set } = useThree();
   React.useEffect(() => {
-    set({ size: { width: window.innerWidth, height: window.innerHeight } });
+    set({ size: { width: window.innerWidth, height: window.innerHeight, top: window.innerHeight, left: window.innerWidth } });
   }, [set]);
   return null;
 };
