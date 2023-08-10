@@ -1,7 +1,7 @@
 
 
 import { Link } from "@remix-run/react";
-import MovingObject from '../components/chicken.client';
+// import MovingObject from '../components/chicken.client';
 
 import MovingObject1 from '../components/Cloud.client';
  // import { ClientOnly } from "remix-utils";
@@ -9,7 +9,7 @@ import MovingObject1 from '../components/Cloud.client';
 
 
 export default function Article4() {
-  // @ts-ignore
+
   return (
     <div>
 
