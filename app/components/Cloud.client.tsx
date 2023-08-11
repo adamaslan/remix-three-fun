@@ -9,7 +9,11 @@ const Box1: React.FC = () => {
   const boxRef = useRef<THREE.Mesh>(null);
   useFrame(() => boxRef.current?.rotateY(0.01));
   return (
+    // REF
     <mesh ref={boxRef}>
+
+      {/* SHAPES */}
+
       <Box position={[2, 1, 0]} args={[1, 1, 1]}>
         <meshStandardMaterial attach="material" color={"red"} />
       </Box>
@@ -22,12 +26,14 @@ const Box1: React.FC = () => {
       <Torus position={[0, 2, 0]} args={[1]}>
         <meshStandardMaterial attach="material" color={"yellow"} />
       </Torus>
+
+      {/* Fun Sky  */}
       <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.75} />
     </mesh>
   );
 };
 
-// Create a moving text component
+// A fun moving text component
 const MovingText: React.FC<{color: string; shape: number; position: [x: number, y: number, z: number]}> = ({ color, shape, position }) => {
   // Use a ref to move the text around randomly
   const textRef = useRef<THREE.Object3D>(null);
@@ -48,7 +54,7 @@ const MovingText: React.FC<{color: string; shape: number; position: [x: number, 
 
 // Create a component to set the size of the canvas
 const SetCanvasSize: React.FC = () => {
-  const { size, set } = useThree();
+  const { set } = useThree();
   React.useEffect(() => {
     set({ size: { width: window.innerWidth, height: window.innerHeight, top: window.innerHeight, left: window.innerWidth } });
   }, [set]);
