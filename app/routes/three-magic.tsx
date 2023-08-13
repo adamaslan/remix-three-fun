@@ -1,11 +1,8 @@
 
 
 import { Link } from "@remix-run/react";
-// import MovingObject from '../components/chicken.client';
-
 import MovingObject1 from '../components/Cloud.client';
- // import { ClientOnly } from "remix-utils";
- import { Suspense } from "react";
+import { Suspense } from "react";
 
 
 export default function Article4() {
@@ -13,14 +10,14 @@ export default function Article4() {
   return (
     <div>
 
-   
+   <h1> Fun Example</h1>
 
 
           <br />
           <p className="text-left text-lg tracking-tight sm:text-2xl lg:text-3xl font-serif font-bold"> For the docs on ThreeJS, you can visit
             <a href='https://threejs.org/' className='text-blue-500'>{" "}here</a>.
           </p>
-          <Suspense fallback={null}>
+          <Suspense fallback={<div>Loading...</div>}>
             <MovingObject1 />
           </Suspense>
           <br />

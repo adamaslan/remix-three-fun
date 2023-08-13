@@ -1,3 +1,7 @@
+# Barebones React Three Fiber - ThreeJS - React Remix - Netlify Boiler Plate - with Example
+
+- Find a fun example and all the packages you need to get started with 3d Animation and React Remix
+  
 # Welcome to Remix!
 
 - [Remix Docs](https://remix.run/docs)
