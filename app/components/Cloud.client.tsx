@@ -5,9 +5,14 @@ import { Sky, Box, Sphere, Cylinder, Torus, OrbitControls, Text } from "@react-t
 
 // Create a box component that uses the custom material component
 const Box1: React.FC = () => {
+  
   // Use a ref to rotate the box around its axis
+  //use useRef to store the rotation angle of the box
   const boxRef = useRef<THREE.Mesh>(null);
+
+  //useFrame hook to rotate the box around its y-axis by 0.01 radians every frame
   useFrame(() => boxRef.current?.rotateY(0.01));
+ 
   return (
     // REF
     <mesh ref={boxRef}>
@@ -23,9 +28,9 @@ const Box1: React.FC = () => {
       <Cylinder position={[-2, 0, 0]} args={[1]}>
         <meshStandardMaterial attach="material" color={"blue"} />
       </Cylinder>
-      <Torus position={[0, 2, 0]} args={[1]}>
+      {/* <Torus position={[0, 2, 0]} args={[1]}>
         <meshStandardMaterial attach="material" color={"yellow"} />
-      </Torus>
+      </Torus> */}
 
       {/* Fun Sky  */}
       <Sky distance={450000} sunPosition={[0, 1, 0]} inclination={0} azimuth={0.75} />
