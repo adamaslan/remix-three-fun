@@ -17,9 +17,12 @@ export default function Article4() {
           <p className="text-left text-lg tracking-tight sm:text-2xl lg:text-3xl font-serif font-bold"> For the docs on ThreeJS, you can visit
             <a href='https://threejs.org/' className='text-blue-500'>{" "}here</a>.
           </p>
+         
+          {/* Add suspense to defer rendering of React Three Fiber */}
           <Suspense fallback={<div>Loading...</div>}>
             <MovingObject1 />
           </Suspense>
+        
           <br />
           <p className="text-left text-lg tracking-tight sm:text-2xl lg:text-3xl font-serif font-bold"> For some solid advice on film sound and sound mixers in NYC, you can visit
             <a href='https://www.nycsoundguy.com' className='text-blue-500'>{" "}NYC Sound Guy here</a>.
